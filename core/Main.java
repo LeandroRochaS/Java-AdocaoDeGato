@@ -128,15 +128,21 @@ public class Main {
 			frame.setVisible(true);
 			
 			// Menu relatório
-			JMenu relatorioMenu = new JMenu("Relatório de Provisões");
+			JMenu relatorioMenu = new JMenu("Relatórios");
 			
-			JMenuItem relatorioMenuItem = new JMenuItem("Relatório");
+			JMenuItem relatorioPMenuItem = new JMenuItem("Relatório Provisões");
+			JMenuItem relatorioCMenuItem = new JMenuItem("Relatório de gatos");
 
-			relatorioMenuItem.addActionListener(e -> {
+			relatorioPMenuItem.addActionListener(e -> {
 				relatorioProvisoes();
 			});
 			
-			relatorioMenu.add(relatorioMenuItem);
+			relatorioCMenuItem.addActionListener(e -> {
+				relatorioCat();
+			});
+			
+			relatorioMenu.add(relatorioPMenuItem);
+			relatorioMenu.add(relatorioCMenuItem);
 
 
 			menuBar.add(relatorioMenu);
